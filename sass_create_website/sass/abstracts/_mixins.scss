@@ -1,0 +1,66 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// media query management breakpoints
+
+//0 -600px:           Phone;
+//600px - 900px:      Tablet portable;
+//900px - 1200px:     Tablet Landscape;
+//1200px - 1800px:    is where our normal style apply;
+//1800px + :          Big desktop;
+
+// $breakpoint argument choices:
+//  - phone,
+//  - tab-port,
+//  - tab-land,
+//  - big-desktop,
+
+
+// calculation of breakpoint
+
+// ORDER: base + typography + general layout + page layout + components
+
+// ======== START BREAKPOINTS =========
+
+@mixin respond($breakpoint) {
+  // 600px
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content
+    };
+  }
+
+  // 900px
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content
+    };
+  }
+
+  // 1200px
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content
+    };
+  }
+
+  // 1800px
+  @if $breakpoint == big-desktop {
+    @media only screen and (max-width: 112.5em) {@content};
+  }
+}
+
+
+

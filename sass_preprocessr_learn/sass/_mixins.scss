@@ -1,0 +1,50 @@
+@mixin grid($cols, $margin) {
+  float: left;
+  background: #f0f;
+  margin-bottom: $margin;
+  height: 150px;
+
+  @if ($cols >= 5) {
+    width: 100%;
+    margin-right: 0;
+  } @else {
+    width: ((100% -(($cols - 1) * $margin)) / $cols);
+    margin-right: $margin;
+  }
+
+
+  &:nth-child(#{$cols}n) {
+    margin-right: 0;
+  }
+}
+
+@mixin link($link, $hover, $active, $visited) {
+  a {
+    color: $link;
+
+    &:hover {
+      color: $hover;
+    }
+
+    &:active {
+      color: $active;
+    }
+
+    //&:visited {
+    //  color: $visited;
+    //}
+
+    @content;
+  }
+}
+
+@mixin font($color, $fontWeight) {
+  font-size: $mainFontSize;
+  font-weight: $fontWeight;
+  font-family: Arial, sans-serif;
+  color: $color;
+}
+
+@mixin padd($padd...) {
+  padding: $padd;
+}

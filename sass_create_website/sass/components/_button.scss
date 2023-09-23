@@ -1,3 +1,6 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
 .btn {
   &,
   &:link,
@@ -53,6 +56,15 @@
     }
   }
 
+  &--text {
+    background-color: $color-gray-light-2;
+    color: $color-gray-dark-2;
+
+    &::after {
+      background-color: $color-gray-dark;
+    }
+  }
+
   &::after {
     content: "";
     display: inline-block;
@@ -71,15 +83,6 @@
   &--animated {
     animation: moveInBottom .5s ease-out .75s;
     animation-fill-mode: backwards;
-  }
-}
-
-.section-stories {
-  position: relative;
-  padding: 15rem 0;
-
-  @include respond(tab-port) {
-    padding: 10rem 0;
   }
 }
 

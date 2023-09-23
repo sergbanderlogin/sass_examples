@@ -1,3 +1,6 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
 .story {
   width: 75%;
   margin: 0 auto;
@@ -5,15 +8,13 @@
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  padding-: 6rem;
-  padding-left: 9rem;
+  padding: 6rem 6rem 6rem 9rem;
   font-size: $default-font-size;
   transform: skewX(-12deg);
 
   @include respond(tab-port) {
     width: 100%;
-    padding: 4rem;
-    padding-left: 7rem;
+    padding: 4rem 4rem 4rem 7rem;
   }
 
   @include respond(phone) {

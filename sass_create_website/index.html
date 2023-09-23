@@ -25,7 +25,7 @@
 
   <div class="navigation__background">&nbsp;</div>
 
-  <!-- =========== Namigation Items ============= -->
+  <!-- =========== Navigation Items ============= -->
 
   <nav class="navigation__nav">
     <ul class="navigation__list">
@@ -235,7 +235,7 @@
                 <p class="card__price-only">only</p>
                 <p class="card__price-value">$7676</p>
               </div>
-              <a href="#" id="popup" class="btn btn--white">Read Now!</a>
+              <a href="#" id="popup-1" class="btn btn--white">Read Now!</a>
             </div>
           </div>
         </div>
@@ -266,7 +266,7 @@
                 <p class="card__price-only">only</p>
                 <p class="card__price-value">$7676</p>
               </div>
-              <a href="#" id="popup" class="btn btn--white">Read Now!</a>
+              <a href="#" id="popup-2" class="btn btn--white">Read Now!</a>
             </div>
           </div>
         </div>
@@ -334,8 +334,71 @@
     </div>
 
     <div class="u-center-text u-margin-top-huge">
-      <a href="#" class="btn btn-text">Read all Stories &rarr;</a>
+      <a href="#" class="btn btn--text">Read all Stories &rarr;</a>
     </div>
+  </section>
+
+  <!-- ======= SECTION BOOK ======= -->
+  <section class="section-book">
+
+    <section class="section-book">
+      <div class="row">
+        <div class="book">
+          <div class="book__form">
+            <form action="#" class="form">
+              <div class="u-margin-bottom-medium">
+                <h2 class="heading-secondary">
+                  Start Booking now
+                </h2>
+              </div>
+
+              <div class="form__group">
+                <input
+                    type="text"
+                    class="form__input"
+                    placeholder="Full name"
+                    id="name"
+                    required/>
+                <label for="name" class="form__label">Full name</label>
+              </div>
+
+              <div class="form__group">
+                <input
+                    type="email"
+                    class="form__input"
+                    placeholder="Your email"
+                    id="email"
+                    required/>
+                <label for="email" class="form__label">Email Address</label>
+              </div>
+
+              <div class="form__group u-margin-bottom-medium">
+                <div class="form__radio-group">
+                  <input type="radio" class="form__radio-input" id="small" name="size"/>
+                  <label for="small" class="form__radio-label">
+                    <span class="form__radio-button"></span>
+                    Small group
+                  </label>
+                </div>
+
+                <div class="form__radio-group">
+                  <input type="radio" class="form__radio-input" id="large" name="size"/>
+                  <label for="large" class="form__radio-label">
+                    <span class="form__radio-button"></span>
+                    Large group
+                  </label>
+                </div>
+              </div>
+
+              <div class="form__group">
+                <button class="btn btn--green">Next step &rarr;</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   </section>
 </main>
 
